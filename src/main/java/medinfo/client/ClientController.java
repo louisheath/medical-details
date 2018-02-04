@@ -16,19 +16,19 @@ public class ClientController {
     @Autowired
     ClientRepo clientRepo;
 
-    // add fixed clients to save dev time
-    private void makeClients() {
-        Client jack = new Client("12345", "Jack Jones", "Katie", "071234");
-        Client kenny = new Client("15435", "Kenny Lomas", "Jake Campbell", "0712463");
-        Client palvi = new Client("64533", "Palvi Shah", "Muntazim", "07567467");
-        clientRepo.save(jack);
-        clientRepo.save(kenny);
-        clientRepo.save(palvi);
-    }
+//    // add fixed clients to save dev time
+//    private void makeClients() {
+//        Client jack = new Client("12345", "Jack Jones", "Katie", "071234");
+//        Client kenny = new Client("15435", "Kenny Lomas", "Jake Campbell", "0712463");
+//        Client palvi = new Client("64533", "Palvi Shah", "Muntazim", "07567467");
+//        clientRepo.save(jack);
+//        clientRepo.save(kenny);
+//        clientRepo.save(palvi);
+//    }
 
     @RequestMapping("/")
     public String hello(Model model) {
-        makeClients();
+        //makeClients();
         List<Client> clients = new ArrayList<>();
         clientRepo.findAll().forEach(c -> clients.add(c));
         model.addAttribute("clients", clients);
@@ -88,5 +88,13 @@ public class ClientController {
         client.setMeds(meds);
         clientRepo.save(client);
         return ("redirect:/" + client.getnHSNumber());
+    }
+
+    //  Delete client
+    //
+    @RequestMapping("/{id}/delete")
+    public String delete(@PathVariable String id, Model model) {
+        clientRepo.delete(id);
+        return("redirect:/");
     }
 }

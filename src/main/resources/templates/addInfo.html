@@ -22,15 +22,15 @@
 
         <div class="jumbotron">
 
-            <p id="title" class="bold">Add Medical Info</p>
+            <p id="title" class="bold">Add Information</p>
 
             <hr />
 
             <form action="#" th:action="@{/} + ${id} + @{/addInfo}" th:object="${formString}" method="post" class="form-inline">
                 <div class="row">
-                    <div class="col-sm-4 col-md-3"><label for="info">Medical Information</label></div>
+                    <div class="col-sm-4 col-md-3"><label for="info">Information</label></div>
                     <div class="col-sm-8 col-md-9">
-                        <input type="text" th:field="*{contents}" name="info" class="form-control" id="info" placeholder="Enter Medical Info"/>
+                        <input type="text" th:field="*{contents}" name="info" class="form-control" id="info" placeholder="Enter Information"/>
                     </div>
                 </div>
 

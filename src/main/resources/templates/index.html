@@ -37,8 +37,11 @@
                         <div class="col-sm-3">
                             <span th:text="${client.nHSNumber}"/>
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-7">
                             <span th:text="${client.name}"/>
+                        </div>
+                        <div class="col-sm-2 del">
+                            <a th:href="@{/} + ${client.nHSNumber} + @{/delete}">[delete]</a>
                         </div>
                     </div>
                 </a>

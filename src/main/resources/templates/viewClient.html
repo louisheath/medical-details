@@ -20,7 +20,7 @@
 
         <a class="home" th:href="@{/}">HOME</a>
 
-		<div class="jumbotron">
+		<div class="jumbotron client">
 
 			<p id="title" class="bold">Medical Details</p>
 
@@ -84,10 +84,10 @@
                 </div>
             </div>
 
-            <form th:action="@{/} + ${client.nHSNumber} + @{/addInfo}" method="get">
+            <form class="float" th:action="@{/} + ${client.nHSNumber} + @{/addInfo}" method="get">
                 <button type="submit" class="btn btn-primary">Add Information</button>
             </form>
-            <form th:action="@{/} + ${client.nHSNumber} + @{/addMed}" method="get">
+            <form class="float" th:action="@{/} + ${client.nHSNumber} + @{/addMed}" method="get">
                 <button type="submit" class="btn btn-primary">Add Medication</button>
             </form>
 		</div>

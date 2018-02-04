@@ -1,15 +1,29 @@
 .container {
-	padding: 5%; 
-}
-.jumbotron {
-	background-color: #e5f4ff;
+    padding-top: 50px;
+	padding-left: 5%;
+    padding-right: 5%;
 }
 
-/* 'home' button */
+.jumbotron {
+	background-color: #e5f4ff;
+    padding-bottom: 55px;
+}
+div.client {
+    padding-bottom: 110px;
+}
+
+/* link to homepage */
 
 a.home {
     position: fixed;
     bottom: 94%;
+}
+
+/* floating buttons in viewPatient */
+
+form.float {
+    float: left;
+    padding-right: 10px;
 }
 
 /* table header */
@@ -46,6 +60,11 @@ input.form-control {
 
 button.home {
     margin-top: 22px;
+}
+
+div.del {
+    text-align: right;
+    color: grey;
 }
 
 /* Text formatting */

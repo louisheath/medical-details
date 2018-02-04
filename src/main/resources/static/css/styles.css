@@ -19,6 +19,8 @@ div.home {
     bottom: 94%;
     background: white;
     border-radius: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
 }
 
 /* floating buttons in viewPatient */

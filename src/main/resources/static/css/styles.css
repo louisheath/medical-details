@@ -30,12 +30,6 @@ form.float {
     padding-right: 10px;
 }
 
-/* table header */
-
-div.th {
-    font-weight: 500;
-}
-
 /* Align bullet points left */
 
 ul {
@@ -66,9 +60,15 @@ button.home {
     margin-top: 22px;
 }
 
-div.del {
+td.name {
+    min-width: 150px;
+}
+td.del {
     text-align: right;
     color: grey;
+}
+table.index{
+    width: 100%;
 }
 
 /* Text formatting */

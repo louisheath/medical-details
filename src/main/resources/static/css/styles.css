@@ -18,6 +18,14 @@ a.home {
     position: fixed;
     bottom: 94%;
 }
+@media screen
+and (device-width: 360px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3) {
+    a.home {
+        bottom: 98%;
+    }
+}
 
 /* floating buttons in viewPatient */
 

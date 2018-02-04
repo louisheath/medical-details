@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>Medical Details</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+		  rel="stylesheet" media="screen"/>
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="css/styles.css" th:href="@{css/styles.css}" />
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			
+			<p id="title" class="bold">Medical Details</p>
+
+			<hr />
+
+			<div class="row">
+				<div class="col-sm-3">
+					<p class="bold">Name</p>
+				</div>
+				<div class="col-sm-9">
+					<p><span th:text="${client.name}"/></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<p class="bold">NHS Number</p>
+				</div>
+				<div class="col-sm-9">
+					<p><span th:text="${client.nHSNumber}"/></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-3">
+					<p class="bold">ICE Contact</p>
+				</div>
+				<div class="col-sm-9">
+					<p>Mr Jake Campbell</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<p class="bold">ICE Contact Number</p>
+				</div>
+				<div class="col-sm-9">
+					<p>07771122333</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-3">
+					<p class="bold">Information</p>
+				</div>
+				<div class="col-sm-9">
+					<ul>
+						<li>Diabetic</li>
+						<li>Vegan</li>
+						<li>Scared of spiders</li>
+						<li>Allergic to paracetamol</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-3">
+					<p class="bold">Medication</p>
+				</div>
+				<div class="col-sm-9">
+					<ul>
+						<li>Clinically trialling marijuana</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.2.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>

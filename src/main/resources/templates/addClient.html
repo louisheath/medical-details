@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Medical Details</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="css/styles.css" th:href="@{css/styles.css}" />
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+
+        <p id="title" class="bold">Add Client</p>
+
+        <hr />
+
+        <form action="#" th:action="@{/confirmAdd}" th:object="${client}" method="post" class="form-inline">
+            <div><tr>
+                <td><label for="id">NHS Number</label></td>
+                <td><input type="text" th:field="*{nHSNumber}" class="form-control" id="id" placeholder="Enter NHS Number"/></td>
+            </tr></div>
+            <div><tr>
+                <td><label for="name">Client Name</label></td>
+                <td><input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Enter Client Name"/></td>
+            </tr></div>
+
+            <tr><td><button type="submit" class="btn btn-primary">Submit</button></td></tr>
+        </form>
+
+    </div>
+</div>
+
+<script src="http://cdn.jsdelivr.net/webjars/jquery/2.2.4/jquery.min.js"
+        th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>

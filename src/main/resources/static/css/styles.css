@@ -1,0 +1,45 @@
+.container {
+	padding: 5%; 
+}
+.jumbotron {
+	background-color: #e5f4ff;
+}
+
+/* Align bullet points left */
+
+ul {
+ 	padding-left: 0;   
+ 	font-weight: 300;
+}
+ul li {
+ 	list-style-position: inside;
+}
+
+/* Format table for addClient form */
+
+td:first-child {
+	width: 30%;
+}
+
+/* Text formatting */
+
+.row {
+	vertical-align: center;
+}
+
+hr {
+	margin-top: 0px;
+}
+
+.jumbotron p {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.jumbotron .bold {
+	font-weight: bold;
+}
+
+.jumbotron #title {
+	font-size: 50px;
+}

@@ -5,6 +5,19 @@
 	background-color: #e5f4ff;
 }
 
+/* 'home' button */
+
+a.home {
+    position: fixed;
+    bottom: 94%;
+}
+
+/* table header */
+
+div.th {
+    font-weight: 500;
+}
+
 /* Align bullet points left */
 
 ul {
@@ -17,8 +30,22 @@ ul li {
 
 /* Format table for addClient form */
 
-td:first-child {
-	width: 30%;
+label {
+    padding-top: 5%;
+}
+
+button {
+	margin-top: 13px;
+}
+
+input.form-control {
+    min-width: 40%;
+}
+
+/* Home page */
+
+button.home {
+    margin-top: 22px;
 }
 
 /* Text formatting */
@@ -42,4 +69,8 @@ hr {
 
 .jumbotron #title {
 	font-size: 50px;
+}
+
+.jumbotron #subtitle {
+    font-size: 20px;
 }

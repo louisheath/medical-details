@@ -13,35 +13,54 @@
           rel="stylesheet" media="screen"/>
 
     <link rel="stylesheet" type="text/css" media="all"
-          href="css/styles.css" th:href="@{css/styles.css}" />
+          href="css/styles.css" th:href="@{/css/styles.css}" />
 </head>
 <body>
-<div class="container">
-    <div class="jumbotron">
+    <div class="container">
 
-        <p id="title" class="bold">Add Client</p>
+        <a class="home" th:href="@{/}">HOME</a>
 
-        <hr />
+        <div class="jumbotron">
 
-        <form action="#" th:action="@{/confirmAdd}" th:object="${client}" method="post" class="form-inline">
-            <div><tr>
-                <td><label for="id">NHS Number</label></td>
-                <td><input type="text" th:field="*{nHSNumber}" class="form-control" id="id" placeholder="Enter NHS Number"/></td>
-            </tr></div>
-            <div><tr>
-                <td><label for="name">Client Name</label></td>
-                <td><input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Enter Client Name"/></td>
-            </tr></div>
+            <p id="title" class="bold">Add Client</p>
 
-            <tr><td><button type="submit" class="btn btn-primary">Submit</button></td></tr>
-        </form>
+            <hr />
 
+            <form action="#" th:action="@{/add}" th:object="${client}" method="post" class="form-inline">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3"><label for="id">NHS Number</label></div>
+                    <div class="col-sm-8 col-md-9">
+                        <input type="text" th:field="*{nHSNumber}" class="form-control" id="id" placeholder="Enter NHS Number"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-3"><label for="name">Client Name</label></div>
+                    <div class="col-sm-8 col-md-9">
+                        <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Enter Client Name"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-3"><label for="ICEname">ICE Contact Name</label></div>
+                    <div class="col-sm-8 col-md-9">
+                        <input type="text" th:field="*{iCEName}" class="form-control" id="ICEname" placeholder="Enter ICE Contact Name"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-3"><label for="ICEnumber">ICE Contact Number</label></div>
+                    <div class="col-sm-8 col-md-9">
+                        <input type="text" th:field="*{iCENumber}" class="form-control" id="ICEnumber" placeholder="Enter ICE Contact Name"/>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
     </div>
-</div>
 
-<script src="http://cdn.jsdelivr.net/webjars/jquery/2.2.4/jquery.min.js"
-        th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.2.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package medinfo;
+package medinfo.client;
 
 
 import org.springframework.data.repository.CrudRepository;
